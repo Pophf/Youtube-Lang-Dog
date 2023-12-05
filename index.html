@@ -2,9 +2,9 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>浪狗跨域追踪 Da.Lang.Dog</title>
-    <meta name="description" content="浪狗跨域追踪。">
-    <meta name="keyword" content="浪狗跨域追踪">
+    <title>浪狗YT跨域 YouTube.Lang.Dog</title>
+    <meta name="description" content="浪狗YouTube跨域">
+    <meta name="keyword" content="浪狗YouTube跨域">
     <meta name="author" content="Lang.Dog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -17,17 +17,32 @@
   <body style='padding-top: 25vh;' background="images/bg3.webp">
     <nav class="head">
       <a href="./">
-        <h1>浪狗跨域追踪</h1>
-        <sup>嗜血狂暴恶犬出没，请谨慎使用！</sup></a>
+        <h1>浪狗YouTube跨域</h1>
+        <sup>从这里开始观看YouTube视频！</sup></a>
     </nav>
     <div class="ui-input">
-      <form>
-        <input class="sub" type="text" id="site" placeholder="输入追踪目的地">
-        <button class="default" type="button" value="追踪" id="btn" onclick="jump()">追踪</button></form>
+	    
+<form action="https://www.proxyium.com/zh-CN/proxyrequest" method="post">
+<input type="text" name="type" value="youtube" style="display: none;">
+<input placeholder="在此处搜索视频或频道，或直接单击“GO”进入 YouTube 主页" type="text" class="sub" name="url">
+<button type="submit" value="Send" class="default" style="
+    border-radius: 0 .25rem .25rem 0;
+    margin-top: 5px;
+" onclick="dataLayer.push({'event' : 'GAEvent', 'eventAction' : 'go', 'eventCategory' : 'webproxy'});">畅行<svg id="f75ca241-d6bc-4e8a-9580-36c72570d977" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.6 319.9" style="
+    height: 12px;
+    min-height: unset;
+    min-width: unset;
+    margin-left: 7px;
+    margin-top: -2px;
+"><defs><style>.ebeb48e9-bb1f-444f-a8d9-accb8cc17441{fill:#fff;}</style></defs><title>arrow</title><path class="ebeb48e9-bb1f-444f-a8d9-accb8cc17441" d="M199.55,176.85l-136,136a23.9,23.9,0,0,1-33.9,0l-22.6-22.6a23.9,23.9,0,0,1,0-33.9l96.4-96.4L7.05,63.55a23.9,23.9,0,0,1,0-33.9l22.6-22.6a23.9,23.9,0,0,1,33.9,0l136,136a23.78,23.78,0,0,1,0,33.8Z"></path></svg></button>
+
+
+	
+	    
     </div>
     <div id="content"></div>
     <footer>
-      <p>&copy; Da.Lang.Dog 2023</p>
+      <p>&copy; YouTube.Lang.Dog 2023</p>
     </footer>
     <div id="load" style='display: none;'>
       <div></div>
@@ -39,23 +54,7 @@
     }
     </style>
 	
-    <script type="text/javascript">//敲回车键相当于确认键
-      document.onkeydown = function(event) {
-        var code = event.keyCode;
-        if (code === 13) { //这是键盘的enter监听事件
-          $("#btn").focus();
-        }
-      };
 
-      function jump() {
-        var site = $("#site").val();
-        if (site === '' || site === undefined || site == null) {
-          alert("没有输入追踪目的地！");
-          return;
-        }
-        window.location.href = "https://go.lang.dog/fly/" + site;
-      }
-	  </script>
   </body>
 
 </html>
